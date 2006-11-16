@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" xmlns="http://pear.php.net/dtd/package-2.0"
+    xmlns:tasks="http://pear.php.net/dtd/tasks-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
+
+ <name>QA_Pear_PackageStatus</name>
+ <channel>pear.php.net</channel>
+ <summary>PEAR package analysis.</summary>
+ <description>
+  Analyzes all the package.xml files in PEAR and
+  generates some statistics
+ </description>
+
+ <lead>
+  <name>Christian Weiske</name>
+  <user>cweiske</user>
+  <email>cweiske@php.net</email>
+  <active>yes</active>
+ </lead>
+
+ <date>2006-11-13</date>
+
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+
+ <notes>
+  - First version
+ </notes>
+
+ <contents>
+  <dir name="/" baseinstalldir="/">
+   <dir name="QA">
+    <dir name="Pear">
+     <file name="PackageStatus.php" role="php"/>
+     <dir name="PackageStatus">
+      <file name="PackageXmlFinder.php" role="php"/>
+      <dir name="Renderer">
+       <file name="Simple.php" role="php"/>
+      </dir>
+     </dir>
+    </dir>
+   </dir>
+   <dir name="examples">
+    <file name="genSimple.php" role="doc"/>
+    <file name="dumpStats.php" role="doc"/>
+    <file name="listPackages.php" role="doc"/>
+   </dir>
+  </dir>
+ </contents>
+
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1</min>
+    <max>5.999.999</max>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+    <name>HTML_Page2</name>
+    <channel>pear.php.net</channel>
+    <min>0.5.0beta</min>
+   </package>
+   <package>
+    <name>HTML_Table</name>
+    <channel>pear.php.net</channel>
+    <min>1.7.5</min>
+   </package>
+  </required>
+ </dependencies>
+
+ <phprelease/>
+
+ <changelog>
+
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <date>2006-11-13</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+    First version
+   </notes>
+  </release>
+ </changelog>
+
+</package>
