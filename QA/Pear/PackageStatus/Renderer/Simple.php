@@ -5,6 +5,9 @@ require_once 'HTML/Table.php';
 
 class QA_Pear_PackageStatus_Renderer_Simple
 {
+    var $options = array();
+    var $options['jsDirectory'] = null;
+
     public function render($arStats)
     {
         $page = new HTML_Page2();
@@ -22,15 +25,18 @@ class QA_Pear_PackageStatus_Renderer_Simple
 }
 EOD;
         $page->addStyleDeclaration($css);
+        if ($this->$options['jsDirectory'] !== null) {
+            $page->addscript("{$options['jsDirectory']}/sorttable.js");
+        }
 
-        $table = new HTML_Table(array('border' => '1'));
+        $table = new HTML_Table(array('border' => '1', 'class' => 'sortable'));
         $table->getHeader()->addRow(array('Package', 'package.xml version', 'Version missing', 'Stability', 'Last release', 'Time since last release'), null, 'th');
 
-        $nCountPackages     = count($arStats);
-        $nCountOneDotZero   = 0;
-        $nCountBadTime      = 0;
-        $nCountNoVersion    = 0;
-        $nCountNoProblems   = 0;
+        $nCountPackages         = count($arStats);
+        $nCountOneDotZero       = 0;
+        $nCountBadTime          = 0;
+        $nCountNoVersion        = 0;
+        $nCountNoProblems       = 0;
         $nCountPackageXmlBroken = 0;
 
         $body = $table->getBody();
@@ -148,7 +154,10 @@ EOD;
         return '<a name="' . $strPackage . '" href="http://pear.php.net/package/' . $strPackage . '">' . $strPackage . '</a>';
     }//public static function getPackageLink($strPackage)
 
-
+    public function setOption($name, $value)
+    {
+        $this->options[$name] = $value;
+    }
 
     public static function getStringFromTimeDiff($nSeconds)
     {
