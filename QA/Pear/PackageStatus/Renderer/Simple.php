@@ -25,8 +25,8 @@ class QA_Pear_PackageStatus_Renderer_Simple
 }
 EOD;
         $page->addStyleDeclaration($css);
-        if ($this->$options['jsDirectory'] !== null) {
-            $page->addscript("{$options['jsDirectory']}/sorttable.js");
+        if ($this->options['jsDirectory'] !== null) {
+            $page->addscript("{$this->options['jsDirectory']}/sorttable.js");
         }
 
         $table = new HTML_Table(array('border' => '1', 'class' => 'sortable'));
