@@ -5,8 +5,9 @@ require_once 'HTML/Table.php';
 
 class QA_Pear_PackageStatus_Renderer_Simple
 {
-    var $options = array();
-    var $options['jsDirectory'] = null;
+    var $options = array(
+        'jsDirectory' => null
+    );
 
     public function render($arStats)
     {
