@@ -8,7 +8,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "QA_Pear_PackageStatus": "./"
+            "QA": "./"
         }
     },
     "description": "More info available on: http://pear.php.net/package/QA_Pear_PackageStatus",
@@ -23,7 +23,8 @@
     },
     "type": "library",
     "require": {
-        "pear/pear_exception": "*"
+        "pear/pear_exception": "*",
+        "pear/html_page2": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
