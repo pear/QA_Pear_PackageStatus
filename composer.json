@@ -1,0 +1,32 @@
+{
+    "authors": [
+        {
+            "email": "cweiske@php.net",
+            "name": "Christian Weiske",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "QA": "./"
+        }
+    },
+    "description": "More info available on: http://pear.php.net/package/QA_Pear_PackageStatus",
+    "include-path": [
+        "./"
+    ],
+    "license": "LGPL",
+    "name": "pear/qa_pear_packagestatus",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=QA_Pear_PackageStatus",
+        "source": "https://github.com/pear/QA_Pear_PackageStatus"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*",
+        "pear/html_page2": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
